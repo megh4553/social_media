@@ -19,6 +19,7 @@
 }
 .popular-item{
     margin-top:50px ;
+    /* height: 10px; */
     display: flex;
     gap: 30px;
 }
