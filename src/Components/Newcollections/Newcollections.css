@@ -7,6 +7,7 @@
     /* height: 20vh; */
     margin-bottom: 100px;
     
+    
 }
 .new-collections h1{
     color: #171717;
@@ -25,8 +26,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 10px;
     gap: 30px;
+    /* margin-bottom: 500px; */
     
 }
 .item{
     height: 50px;
+    margin-bottom: 250px;
 }

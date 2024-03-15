@@ -1,10 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './CSS/ShopCategory.css'
 import { ShopContext } from '../Context/ShopContext'
 import dropdown_icon from '../Components/Assets/dropdown_icon.png'
 import Item from '../Components/Items/Item'
+import { Link } from 'react-router-dom'
+
+
 const ShopCategory = (props) => {
   const {all_product} = useContext(ShopContext);
+  const {menu, setmenu} = useState("men");
   return (
     <div className='shop-category'>
       <img className='shopcategory-banner' src={props.banner} alt="" />
@@ -12,9 +16,11 @@ const ShopCategory = (props) => {
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
-        <div className="shopcategory-sort">
-          Sort By <img src={dropdown_icon} alt="" />
-        </div>
+          <select className='shopcategory-sort'>
+          <option value={'/men'}>Men{menu === "men" ? <hr /> : <></>}</option>
+          <option value={'/women'}>Women {menu === "women" ? <hr /> : <></>}</option>
+          <option value={'/kids'}>Kids {menu === "kids" ? <hr /> : <></>}</option>
+      </select>
       </div>
       <div className="shopcategory-products">
         {
