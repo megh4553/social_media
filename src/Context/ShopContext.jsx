@@ -9,7 +9,7 @@ const getDefaultCart = ()=> {
         cart[index] =0;
         
     }
-    return cart;    
+    return cart;
 }
 const ShopContextProvider = (props) =>{
     const [all_product,setAll_product] = useState([]);
@@ -58,17 +58,17 @@ const ShopContextProvider = (props) =>{
             body: JSON.stringify({"itemId":itemId}),
            }).then((res)=>res.json()).then((data)=>console.log(data));
         }
-    }
-    const getTotalCartAmount = () => {
+    };
+    const getTotalCartAmount =()=>{
         let totalAmount = 0;
-        for (const item in cartItems) {
-            if (cartItems[item] > 0) {
-                let itemInfo = all_product.find((product) => product.id === Number(item));
+        for(const item in cartItems){
+            if(cartItems[item] > 0){
+                let itemInfo = all_product.find((product) => product.id === Number(item))
                 totalAmount += itemInfo.new_price * cartItems[item];
             }
         }
         return totalAmount;
-    };
+    }
     
     const getTotalCartItems = ()=>{
         let totalItem = 0;

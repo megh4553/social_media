@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Newcollections.css'
-// import new_collections from '../Assets/new_collections'
 import Item from '../Items/Item'
-// import { useActionData } from 'react-router-dom'
+
+
 const Newcollections = () => {
 
   const [newCollection, setNewCollection] = useState([]);
